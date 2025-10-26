@@ -82,6 +82,20 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+#todo,
+#done {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.doneItem {
+  text-decoration: line-through;
+  text-decoration-color: red;
+  text-decoration-thickness: 2px;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
