@@ -14,13 +14,22 @@
     <title>The Todos</title>
   </head>
   <body>
-    <div id="app">
-        <h2>Att göra</h2>
-        <ul id="todo"></ul>
-        <h2>Klart</h2>
-        <ul id="done"></ul>
+    <div
+      class="d-flex flex-column justify-content-center align-items-center bg-success"
+      style="height: 100vh; width: 100%; text-align: center"
+    >
+      <div
+        style="background-color: rgba(0, 0, 0, 0.5); border: 2px solid black"
+        class="p-5"
+      >
+        >
+        <h2 class="mb-3 text-primary">Att göra</h2>
+        <ul id="todo" class="list-group mb-4"></ul>
+        <h2 class="mb-3 text-danger">Klart</h2>
+        <ul id="done" class="list-group mb-4"></ul>
       </div>
     </div>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"

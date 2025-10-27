@@ -35,13 +35,6 @@ h1 {
   line-height: 1.1;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -94,6 +87,11 @@ button:focus-visible {
   text-decoration: line-through;
   text-decoration-color: red;
   text-decoration-thickness: 2px;
+}
+
+#todo li,
+#done li {
+  color: white;
 }
 
 @media (prefers-color-scheme: light) {
