@@ -1,6 +1,6 @@
 import "./style.css";
 
-let todoList = [
+let todoObjects = [
   { act: "Gå upp" },
   { act: "Drick kaffe" },
   { act: "Åk till skolan" },
@@ -10,7 +10,23 @@ let todoList = [
   { act: "Gå till sängs" },
 ];
 
+let todoList = [];
+
 let doneList = [];
+
+const savedTodoList = localStorage.getItem("todoList");
+if (savedTodoList === null || JSON.parse(savedTodoList).length === 0) {
+  todoList = todoObjects;
+} else {
+  todoList = JSON.parse(savedTodoList);
+}
+
+const savedDoneList = localStorage.getItem("doneList");
+if (savedDoneList === null || JSON.parse(savedDoneList).length === 0) {
+  doneList = [];
+} else {
+  doneList = JSON.parse(savedDoneList);
+}
 
 const createLi = () => {
   const todo = document.getElementById("todo");
@@ -47,6 +63,11 @@ const createLi = () => {
     });
     done.appendChild(doneItem);
   });
+
+  const todoListSet = JSON.stringify(todoList);
+  localStorage.setItem("todoList", todoListSet);
+  const doneListSet = JSON.stringify(doneList);
+  localStorage.setItem("doneList", doneListSet);
 };
 
 createLi();

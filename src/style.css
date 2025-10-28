@@ -92,7 +92,7 @@ button:focus-visible {
 #todo li,
 #done li {
   color: white;
-  gap: 1rem;
+  margin-bottom: 5px;
 }
 
 @media (prefers-color-scheme: light) {
