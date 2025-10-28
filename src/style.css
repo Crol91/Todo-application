@@ -92,6 +92,7 @@ button:focus-visible {
 #todo li,
 #done li {
   color: white;
+  gap: 1rem;
 }
 
 @media (prefers-color-scheme: light) {

@@ -1,13 +1,13 @@
 import "./style.css";
 
 let todoList = [
-  "Gå upp",
-  "Drick kaffe",
-  "Åk till skolan",
-  "Åk hem",
-  "Träna",
-  "Ät middag",
-  "Gå till sängs",
+  { act: "Gå upp" },
+  { act: "Drick kaffe" },
+  { act: "Åk till skolan" },
+  { act: "Åk hem" },
+  { act: "Träna" },
+  { act: "Ät middag" },
+  { act: "Gå till sängs" },
 ];
 
 let doneList = [];
@@ -23,7 +23,7 @@ const createLi = () => {
     const todoItem = document.createElement("li");
 
     todoItem.className = "todoItem";
-    todoItem.innerHTML = activity;
+    todoItem.innerHTML = activity.act;
     todoItem.addEventListener("click", () => {
       doneList.push(activity);
       todoList.splice(i, 1);
@@ -38,7 +38,7 @@ const createLi = () => {
     const doneItem = document.createElement("li");
 
     doneItem.className = "doneItem";
-    doneItem.innerHTML = activity;
+    doneItem.innerHTML = activity.act;
     doneItem.addEventListener("click", () => {
       todoList.push(activity);
       doneList.splice(i, 1);
