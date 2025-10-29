@@ -1,4 +1,5 @@
 import "./style.css";
+import { Activity } from "./models/activity";
 
 let todoObjects = [
   { act: "Gå upp" },
@@ -28,7 +29,25 @@ if (savedDoneList === null || JSON.parse(savedDoneList).length === 0) {
   doneList = JSON.parse(savedDoneList);
 }
 
-const reset = () => {};
+const handleSubmit = (e) => {
+  e.preventDefault();
+
+  const act = document.getElementById("act").value;
+
+  const sumbittedAct = new Activity(act);
+
+  todoList.push(sumbittedAct);
+
+  localStorage.setItem("todoList", JSON.stringify(todoList));
+
+  createLi(todoList);
+};
+
+const actForm = document.getElementById("actForm");
+
+if (actForm) {
+  actForm.addEventListener("submit", handleSubmit);
+}
 
 const createLi = () => {
   const todo = document.getElementById("todo");

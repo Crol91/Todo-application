@@ -15,9 +15,18 @@
   </head>
   <body>
     <div
-      class="d-flex flex-column justify-content-center align-items-center bg-success"
+      class="d-flex flex-row justify-content-center align-items-center bg-success gap-5"
       style="height: 100vh; width: 100%; text-align: center"
     >
+      <div>
+        <form id="actForm" class="d-flex flex-column gap-4">
+          <label for="activity" style="font-weight: bold" ;
+            >Fler saker att göra?</label
+          >
+          <input id="act" type="text" placeholder="Plugga JavaScript" />
+          <button>Lägg till</button>
+        </form>
+      </div>
       <div
         style="background-color: rgba(0, 0, 0, 0.5); border: 2px solid black"
         class="p-5"
