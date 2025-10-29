@@ -28,6 +28,8 @@ if (savedDoneList === null || JSON.parse(savedDoneList).length === 0) {
   doneList = JSON.parse(savedDoneList);
 }
 
+const reset = () => {};
+
 const createLi = () => {
   const todo = document.getElementById("todo");
   const done = document.getElementById("done");
@@ -71,3 +73,9 @@ const createLi = () => {
 };
 
 createLi();
+
+const resetBtn = document.getElementById("resetBtn");
+resetBtn.addEventListener("click", () => {
+  localStorage.clear();
+  location.reload();
+});
