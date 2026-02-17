@@ -11,6 +11,7 @@ export const createLi = (todoList, doneList) => {
     todoItem.className = "todoItem";
     todoItem.innerHTML = activity.act;
     todoItem.addEventListener("click", () => {
+      activity.done = true;
       doneList.push(activity);
       todoList.splice(i, 1);
 
@@ -26,6 +27,7 @@ export const createLi = (todoList, doneList) => {
     doneItem.className = "doneItem";
     doneItem.innerHTML = activity.act;
     doneItem.addEventListener("click", () => {
+      activity.done = false;
       todoList.push(activity);
       doneList.splice(i, 1);
 
