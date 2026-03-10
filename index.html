@@ -23,7 +23,15 @@
           <label for="activity" style="font-weight: bold" ;
             >Fler saker att göra?</label
           >
-          <input id="act" type="text" placeholder="Ex: plugga JavaScript" />
+          <input
+            id="act"
+            type="text"
+            placeholder="Ex: plugga JavaScript"
+            required
+            minlength="3"
+            pattern="[a-zA-Z ]+"
+            title="only letters and normal spaces, at least 3 characters"
+          />
           <button>Lägg till</button>
         </form>
       </div>
